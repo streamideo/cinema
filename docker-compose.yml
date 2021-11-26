@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  storage_manager:
+    build: './storage-manager'
+  streamideo:
+    build: './streamideo'
+  cinema:
+    build: ./
