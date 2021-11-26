@@ -1,0 +1,6 @@
+[submodule "storage-manager"]
+	path = storage-manager
+	url = https://github.com/streamideo/storage-manager
+[submodule "streamideo"]
+	path = streamideo
+	url = https://github.com/streamideo/streamideo.git
