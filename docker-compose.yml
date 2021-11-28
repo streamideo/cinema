@@ -9,6 +9,12 @@ services:
     image: mysql:5.7
     ports:
       - ${MYSQL_PORT}:3306
+    volumes:
+      - ./env/mysql/db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=streamideo
+      - MYSQL_PASSWORD=streamideo
   streamideo:
     build: ./streamideo
     volumes:
