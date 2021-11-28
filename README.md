@@ -14,6 +14,9 @@ Clone sub project
 
 ```
 git submodule update --init
+
+cd streamideo
+git submodule update --init
 ```
 
 Run docker
