@@ -9,8 +9,6 @@ services:
     image: mysql:5.7
     ports:
       - ${MYSQL_PORT}:3306
-    volumes:
-      - ./env/logs/mysql.log:/var/log/mysql/mysql.log
   streamideo:
     build: ./streamideo
     volumes:
