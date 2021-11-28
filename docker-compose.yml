@@ -1,9 +1,23 @@
 version: '3'
 
 services:
-  storage_manager:
-    build: './storage-manager'
+  php:
+    image: php:fpm-buster
+    ports:
+      - ${PHP_FPM_PORT}:9000
+  mysql:
+    image: mysql:5.7
+    ports:
+      - ${MYSQL_PORT}:3306
+    volumes:
+      - ./env/logs/mysql.log:/var/log/mysql/mysql.log
   streamideo:
-    build: './streamideo'
-  cinema:
-    build: ./
+    build: ./streamideo
+    volumes:
+      - ./env/php/embed/php.ini:/etc/php/8.0/embed/php.ini
+      - ./env/nginx:/etc/nginx
+    ports:
+      - ${APP_PORT}:80
+    links:
+      - php
+      - mysql
