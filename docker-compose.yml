@@ -3,13 +3,19 @@ version: '3'
 services:
   php:
     image: php:fpm-buster
+    container_name: streamideo_php
+    volumes:
+      - ./cinema:/usr/share/nginx/app
+      - ./storage-manager:/usr/share/nginx/storage
     ports:
       - ${PHP_FPM_PORT}:9000
   mysql:
     image: mysql:5.7
+    container_name: streamideo_db
     ports:
       - ${MYSQL_PORT}:3306
     volumes:
+      - ./env/mysql/init:/docker-entrypoint-initdb.d
       - ./env/mysql/db:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
@@ -33,7 +39,7 @@ services:
     ports:
       - ${STORAGE_MANAGER_PORT}:80
     volumes:
-      - ./storage-manager:/usr/share/nginx
+      - ./storage-manager:/usr/share/nginx/storage
       - ./env/sites/storage-manager.conf:/etc/nginx/conf.d/default.conf
     links:
       - php
@@ -44,7 +50,7 @@ services:
     ports:
       - ${APP_PORT}:80
     volumes:
-      - ./cinema:/usr/share/nginx
+      - ./cinema:/usr/share/nginx/app
       - ./env/sites/cinema.conf:/etc/nginx/conf.d/default.conf
     links:
       - php
