@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4842c22e789d247c4b660e69490545f",
+    "content-hash": "f9d90c3782215368e0739edef59fc2c0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2629,6 +2629,47 @@
                 "source": "https://github.com/bobthecow/psysh/tree/v0.10.11"
             },
             "time": "2021-11-23T15:02:17+00:00"
+        },
+        {
+            "name": "puleeno/laravel-plugin-system",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/puleeno/laravel-plugin-system.git",
+                "reference": "ce5254f98fb95d58b91c546b9f79d698919c25a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/puleeno/laravel-plugin-system/zipball/ce5254f98fb95d58b91c546b9f79d698919c25a9",
+                "reference": "ce5254f98fb95d58b91c546b9f79d698919c25a9",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^8.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Puleeno\\LaravelPluginSystem\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Puleeno Nguyen",
+                    "email": "puleeno@gmail.com"
+                }
+            ],
+            "description": "Create the plugin system for Laravel and Lumen framework",
+            "support": {
+                "issues": "https://github.com/puleeno/laravel-plugin-system/issues",
+                "source": "https://github.com/puleeno/laravel-plugin-system/tree/master"
+            },
+            "time": "2021-11-29T03:44:41+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -7955,7 +7996,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "puleeno/laravel-plugin-system": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
