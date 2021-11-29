@@ -24,3 +24,11 @@ Run docker
 ```
 docker-compose up -d
 ```
+
+
+# Các URL của dự án
+
+- Web Cinema: http://localhost:8080
+- Storage URL: https://localhost:5000
+- Streaming URL: https://localhost:5050
+
