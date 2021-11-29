@@ -7,7 +7,7 @@ Setup dự án
 Clone source
 
 ```
-git clone git@github.com:streamideo/streamideo-cinema.git
+git clone git@github.com:streamideo/cinema.git
 ```
 
 Clone sub project
