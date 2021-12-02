@@ -30,5 +30,5 @@ docker-compose up -d
 
 - Web Cinema: http://localhost:8080
 - Storage URL: https://localhost:6060
-- Streaming URL: https://localhost:5050
+- Streaming URL: https://localhost:7070
 
